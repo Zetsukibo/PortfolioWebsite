@@ -662,7 +662,7 @@ $user_data = mysqli_fetch_array($run);
             <h3>Social Profiles</h3>
             <div class="social-links">
             <?php if ($user_data['twitter'] != '') { ?>
-              <a href="https://twitter.com/<?= $user_data['twitter'] ?>" class="twitter"><i class="bi bi--twitter"></i></a>
+              <a href="https://twitter.com/<?= $user_data['twitter'] ?>" class="twitter"><i class="bi bi-twitter"></i></a>
             <?php
             }
             ?>
@@ -682,6 +682,11 @@ $user_data = mysqli_fetch_array($run);
             if ($user_data['skype'] != '') {
               ?>
               <a href="https://skype.com/<?= $user_data['skype'] ?>" class="google-plus"><i class="bi bi-skype"></i></a>
+              <?php
+            }
+            if ($user_data['skype'] != '') {
+              ?>
+              <a href="https:/youtube.com/<?= $user_data['youtube'] ?>" class="youtube"><i class="bi bi-youtube"></i></a>
               <?php
             }
             if ($user_data['linkedin'] != '') {
