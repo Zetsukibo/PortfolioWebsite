@@ -15,12 +15,12 @@ $user_data = mysqli_fetch_array($run);
   <title>
     <?= $user_data['title'] ?>
   </title>
-  <meta content="" name="description">
-  <meta content="" name="keywords">
+  <meta content="<?=$user_data['description']?>" name="description">
+  <meta content="<?=$user_data['keywords']?>" name="keywords">
 
   <!-- Favicons -->
-  <!--<link href="assets/img/favicon.png" rel="icon">-->
-  <!--<link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">-->
+ <link href="images/<?=$user_data['siteicon']?>" rel="icon">
+  <link href="images/<?=$user_data['siteicon']?>" rel="apple-touch-icon">
 
   <!-- box icons -->
   <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
@@ -42,9 +42,27 @@ $user_data = mysqli_fetch_array($run);
   <link href="assets/css/style.css" rel="stylesheet">
 
 </head>
+    <style>
+      body {
+        font-family: "Open Sans", sans-serif;
+        background-color: #040404;
+        color: #fff;
+        overflow-y: scroll; /* Enable vertical scrolling */
+      }
 
+      .background-image {
+        position: fixed;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        z-index: -1;
+        background: url('./assets/img/<?= $user_data['background_img'] ?>') top right no-repeat;
+        background-size: cover;
+      }
+    </style>
 <body>
-
+<div class="background-image"></div>
   <!-- ======= Header ======= -->
   <header id="header">
     <div class="container">
@@ -271,12 +289,11 @@ $user_data = mysqli_fetch_array($run);
             <div class="progress">
               <span class="skill">
                 <?= $skills['skill_name'] ?><i class="val">
-                  <?= $skills['skill_level'] ?>
+                  <?= $skills['skill_level'] ?>%
                 </i>
               </span>
               <div class="progress-bar-wrap">
-                <div class="progress-bar" role="progressbar" aria-valuenow=<?= $skills['skill_level'] ?> aria-valuemin="0"
-                  aria-valuemax="100"></div>
+              <div class="progress-bar" role="progressbar" aria-valuenow="<?=$skills['skill_level']?>" aria-valuemin="0" aria-valuemax="100"></div>
               </div>
             </div>
             <?php
@@ -769,6 +786,7 @@ $user_data = mysqli_fetch_array($run);
   <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
   <script src="assets/vendor/waypoints/noframework.waypoints.js"></script>
   <script src="assets/vendor/php-email-form/validate.js"></script>
+
 
   <!-- Template Main JS File -->
   <script src="assets/js/main.js"></script>
