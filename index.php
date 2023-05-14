@@ -154,7 +154,7 @@ $user_data = mysqli_fetch_array($run);
 
       <div class="row">
         <div class="col-lg-4" data-aos="fade-right">
-          <img src="images/<?= $user_data['profile_pic'] ?>" class="img-fluid" alt="">
+           <img src="images/<?= $user_data['profile_pic'] ?>" class="img-fluid" alt="">
         </div>
         <div class="col-lg-8 pt-4 pt-lg-0 content" data-aos="fade-left">
           <h3>
@@ -166,9 +166,8 @@ $user_data = mysqli_fetch_array($run);
           <div class="row">
             <div class="col-lg-6">
               <ul>
-
                 <?php
-                $query2 = "SELECT * FROM personal_info";
+                $query2 = "SELECT * FROM personal_info LIMIT 5";
                 $run2 = mysqli_query($db, $query2);
                 while ($personal_info = mysqli_fetch_array($run2)) {
                   ?>
@@ -180,7 +179,24 @@ $user_data = mysqli_fetch_array($run);
                   <?php
                 }
                 ?>
-
+              </ul>
+            </div>
+            <div class="col-lg-6">
+              <ul>
+                <?php
+                $query2 = "SELECT * FROM personal_info LIMIT 5, 5";
+                $run2 = mysqli_query($db, $query2);
+                while ($personal_info = mysqli_fetch_array($run2)) {
+                  ?>
+                  <li><i class="bi bi-chevron-right"></i> <strong>
+                      <?= $personal_info['label'] ?>:
+                    </strong> <span>
+                      <?= $personal_info['value'] ?>
+                    </span></li>
+                  <?php
+                }
+                ?>
+              </ul>
             </div>
           </div>
           <p>
@@ -284,73 +300,73 @@ $user_data = mysqli_fetch_array($run);
         <div class="col-lg-3 col-md-4">
           <div class="icon-box">
             <i class="ri-store-line" style="color: #ffbb2c;"></i>
-            <h3>Lorem Ipsum</h3>
+            <h3>Playing</h3>
           </div>
         </div>
         <div class="col-lg-3 col-md-4 mt-4 mt-md-0">
           <div class="icon-box">
             <i class="ri-bar-chart-box-line" style="color: #5578ff;"></i>
-            <h3>Dolor Sitema</h3>
+            <h3>Coding</h3>
           </div>
         </div>
         <div class="col-lg-3 col-md-4 mt-4 mt-md-0">
           <div class="icon-box">
             <i class="ri-calendar-todo-line" style="color: #e80368;"></i>
-            <h3>Sed perspiciatis</h3>
+            <h3>Hiking</h3>
           </div>
         </div>
         <div class="col-lg-3 col-md-4 mt-4 mt-lg-0">
           <div class="icon-box">
             <i class="ri-paint-brush-line" style="color: #e361ff;"></i>
-            <h3>Magni Dolores</h3>
+            <h3>Cosplaying</h3>
           </div>
         </div>
         <div class="col-lg-3 col-md-4 mt-4">
           <div class="icon-box">
             <i class="ri-database-2-line" style="color: #47aeff;"></i>
-            <h3>Nemo Enim</h3>
+            <h3>Studying</h3>
           </div>
         </div>
         <div class="col-lg-3 col-md-4 mt-4">
           <div class="icon-box">
             <i class="ri-gradienter-line" style="color: #ffa76e;"></i>
-            <h3>Eiusmod Tempor</h3>
+            <h3>Pets</h3>
           </div>
         </div>
         <div class="col-lg-3 col-md-4 mt-4">
           <div class="icon-box">
             <i class="ri-file-list-3-line" style="color: #11dbcf;"></i>
-            <h3>Midela Teren</h3>
+            <h3>Basketball</h3>
           </div>
         </div>
         <div class="col-lg-3 col-md-4 mt-4">
           <div class="icon-box">
             <i class="ri-price-tag-2-line" style="color: #4233ff;"></i>
-            <h3>Pira Neve</h3>
+            <h3>Javascript</h3>
           </div>
         </div>
         <div class="col-lg-3 col-md-4 mt-4">
           <div class="icon-box">
             <i class="ri-anchor-line" style="color: #b2904f;"></i>
-            <h3>Dirada Pack</h3>
+            <h3>PHP</h3>
           </div>
         </div>
         <div class="col-lg-3 col-md-4 mt-4">
           <div class="icon-box">
             <i class="ri-disc-line" style="color: #b20969;"></i>
-            <h3>Moton Ideal</h3>
+            <h3>CSS</h3>
           </div>
         </div>
         <div class="col-lg-3 col-md-4 mt-4">
           <div class="icon-box">
             <i class="ri-base-station-line" style="color: #ff5828;"></i>
-            <h3>Verdo Park</h3>
+            <h3>Python</h3>
           </div>
         </div>
         <div class="col-lg-3 col-md-4 mt-4">
           <div class="icon-box">
             <i class="ri-fingerprint-line" style="color: #29cc61;"></i>
-            <h3>Flavor Nivelanda</h3>
+            <h3>Her</h3>
           </div>
         </div>
       </div>
@@ -371,8 +387,7 @@ $user_data = mysqli_fetch_array($run);
             <div class="testimonial-item">
               <p>
                 <i class="bx bxs-quote-alt-left quote-icon-left"></i>
-                Proin iaculis purus consequat sem cure digni ssim donec porttitora entum suscipit rhoncus. Accusantium
-                quam, ultricies eget id, aliquam eget nibh et. Maecen aliquam, risus at semper.
+                Working with Cedric was an absolute pleasure. Their attention to detail and design skills are exceptional. They took our vision and transformed it into a stunning and user-friendly website. The frontend code they delivered was clean, well-structured, and optimized for performance. Our users love the intuitive interface and seamless navigation. I highly recommend Cedric Vico for any frontend development project.
                 <i class="bx bxs-quote-alt-right quote-icon-right"></i>
               </p>
               <img src="assets/img/testimonials/testimonials-1.jpg" class="testimonial-img" alt="">
@@ -385,8 +400,7 @@ $user_data = mysqli_fetch_array($run);
             <div class="testimonial-item">
               <p>
                 <i class="bx bxs-quote-alt-left quote-icon-left"></i>
-                Export tempor illum tamen malis malis eram quae irure esse labore quem cillum quid cillum eram malis
-                quorum velit fore eram velit sunt aliqua noster fugiat irure amet legam anim culpa.
+                Working with Cedric was an absolute pleasure. Their attention to detail and design skills are exceptional. They took our vision and transformed it into a stunning and user-friendly website. The frontend code they delivered was clean, well-structured, and optimized for performance. Our users love the intuitive interface and seamless navigation. I highly recommend Cedric Vico for any frontend development project.
                 <i class="bx bxs-quote-alt-right quote-icon-right"></i>
               </p>
               <img src="assets/img/testimonials/testimonials-2.jpg" class="testimonial-img" alt="">
@@ -399,8 +413,7 @@ $user_data = mysqli_fetch_array($run);
             <div class="testimonial-item">
               <p>
                 <i class="bx bxs-quote-alt-left quote-icon-left"></i>
-                Enim nisi quem export duis labore cillum quae magna enim sint quorum nulla quem veniam duis minim tempor
-                labore quem eram duis noster aute amet eram fore quis sint minim.
+                Working with Cedric was an absolute pleasure. Their attention to detail and design skills are exceptional. They took our vision and transformed it into a stunning and user-friendly website. The frontend code they delivered was clean, well-structured, and optimized for performance. Our users love the intuitive interface and seamless navigation. I highly recommend Cedric Vico for any frontend development project.
                 <i class="bx bxs-quote-alt-right quote-icon-right"></i>
               </p>
               <img src="assets/img/testimonials/testimonials-3.jpg" class="testimonial-img" alt="">
@@ -413,8 +426,7 @@ $user_data = mysqli_fetch_array($run);
             <div class="testimonial-item">
               <p>
                 <i class="bx bxs-quote-alt-left quote-icon-left"></i>
-                Fugiat enim eram quae cillum dolore dolor amet nulla culpa multos export minim fugiat minim velit minim
-                dolor enim duis veniam ipsum anim magna sunt elit fore quem dolore labore illum veniam.
+                Working with Cedric was an absolute pleasure. Their attention to detail and design skills are exceptional. They took our vision and transformed it into a stunning and user-friendly website. The frontend code they delivered was clean, well-structured, and optimized for performance. Our users love the intuitive interface and seamless navigation. I highly recommend Cedric Vico for any frontend development project.
                 <i class="bx bxs-quote-alt-right quote-icon-right"></i>
               </p>
               <img src="assets/img/testimonials/testimonials-4.jpg" class="testimonial-img" alt="">
@@ -427,8 +439,7 @@ $user_data = mysqli_fetch_array($run);
             <div class="testimonial-item">
               <p>
                 <i class="bx bxs-quote-alt-left quote-icon-left"></i>
-                Quis quorum aliqua sint quem legam fore sunt eram irure aliqua veniam tempor noster veniam enim culpa
-                labore duis sunt culpa nulla illum cillum fugiat legam esse veniam culpa fore nisi cillum quid.
+                Working with Cedric was an absolute pleasure. Their attention to detail and design skills are exceptional. They took our vision and transformed it into a stunning and user-friendly website. The frontend code they delivered was clean, well-structured, and optimized for performance. Our users love the intuitive interface and seamless navigation. I highly recommend Cedric Vico for any frontend development project.
                 <i class="bx bxs-quote-alt-right quote-icon-right"></i>
               </p>
               <img src="assets/img/testimonials/testimonials-5.jpg" class="testimonial-img" alt="">
@@ -536,7 +547,7 @@ $user_data = mysqli_fetch_array($run);
         <div class="col-lg-4 col-md-6 d-flex align-items-stretch">
           <div class="icon-box">
             <div class="icon"><i class="bx bxl-dribbble"></i></div>
-            <h4><a href="">Lorem Ipsum</a></h4>
+            <h4><a href="">Service 1</a></h4>
             <p>Voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi</p>
           </div>
         </div>
@@ -544,7 +555,7 @@ $user_data = mysqli_fetch_array($run);
         <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4 mt-md-0">
           <div class="icon-box">
             <div class="icon"><i class="bx bx-file"></i></div>
-            <h4><a href="">Sed ut perspiciatis</a></h4>
+            <h4><a href="">Service 2</a></h4>
             <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore</p>
           </div>
         </div>
@@ -552,7 +563,7 @@ $user_data = mysqli_fetch_array($run);
         <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4 mt-lg-0">
           <div class="icon-box">
             <div class="icon"><i class="bx bx-tachometer"></i></div>
-            <h4><a href="">Magni Dolores</a></h4>
+            <h4><a href="">Service 3</a></h4>
             <p>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia</p>
           </div>
         </div>
@@ -560,7 +571,7 @@ $user_data = mysqli_fetch_array($run);
         <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4">
           <div class="icon-box">
             <div class="icon"><i class="bx bx-world"></i></div>
-            <h4><a href="">Nemo Enim</a></h4>
+            <h4><a href="">Service 4</a></h4>
             <p>At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis</p>
           </div>
         </div>
@@ -568,7 +579,7 @@ $user_data = mysqli_fetch_array($run);
         <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4">
           <div class="icon-box">
             <div class="icon"><i class="bx bx-slideshow"></i></div>
-            <h4><a href="">Dele cardo</a></h4>
+            <h4><a href="">Service 5</a></h4>
             <p>Quis consequatur saepe eligendi voluptatem consequatur dolor consequuntur</p>
           </div>
         </div>
@@ -576,7 +587,7 @@ $user_data = mysqli_fetch_array($run);
         <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4">
           <div class="icon-box">
             <div class="icon"><i class="bx bx-arch"></i></div>
-            <h4><a href="">Divera don</a></h4>
+            <h4><a href="">Service 6</a></h4>
             <p>Modi nostrum vel laborum. Porro fugit error sit minus sapiente sit aspernatur</p>
           </div>
         </div>
@@ -597,7 +608,6 @@ $user_data = mysqli_fetch_array($run);
 
       <div class="row">
         <div class="col-lg-12 d-flex justify-content-center">
-
         </div>
       </div>
 
@@ -610,7 +620,7 @@ $user_data = mysqli_fetch_array($run);
           ?>
           <div class="col-lg-4 col-md-6 portfolio-item filter-app">
             <div class="portfolio-wrap">
-              <img src="images/<?= $portfolio['project_pic'] ?>" class="img-fluid" alt="">
+              <img src="images/<?= $portfolio['project_pic'] ?>" class="img-fluid portfolio-image" alt="">
               <div class="portfolio-info">
                 <h4>
                   <?= $portfolio['project_name'] ?>

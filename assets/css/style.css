@@ -65,23 +65,23 @@ h6 {
 }
 
 #header h1 {
-  font-size: 48px;
+  font-size: 70px;
   margin: 0;
   padding: 0;
   line-height: 1;
-  font-weight: 700;
+  font-weight: 900;
   font-family: "Poppins", sans-serif;
 }
 
 #header h1 a,
 #header h1 a:hover {
-  color: #fff;
+  color: #e5f6ee;
   line-height: 1;
   display: inline-block;
 }
 
 #header h2 {
-  font-size: 24px;
+  font-size: 30px;
   margin-top: 20px;
   color: rgba(255, 255, 255, 0.8);
 }
@@ -103,7 +103,7 @@ h6 {
 }
 
 #header .social-links a {
-  font-size: 16px;
+  font-size: 25px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -114,6 +114,7 @@ h6 {
   border-radius: 50%;
   width: 40px;
   height: 40px;
+  margin-right: 20px;
 }
 
 #header .social-links a:hover {
@@ -214,7 +215,7 @@ h6 {
   justify-content: space-between;
   padding: 0;
   font-family: "Poppins", sans-serif;
-  font-size: 16px;
+  font-size: 20px;
   font-weight: 400;
   color: rgba(255, 255, 255, 0.7);
   white-space: nowrap;
@@ -223,7 +224,7 @@ h6 {
 
 .navbar a i,
 .navbar a:focus i {
-  font-size: 12px;
+  font-size: 15px;
   line-height: 0;
   margin-left: 5px;
 }
@@ -252,7 +253,7 @@ h6 {
 .navbar .active,
 .navbar .active:focus,
 .navbar li:hover>a {
-  color: #fff;
+  color: #08f065;
 }
 
 /**
@@ -427,6 +428,23 @@ section .container {
 .about-me .content p:last-child {
   margin-bottom: 0;
 }
+
+.about-me .col-lg-4 {
+  display: flex;
+  align-items: center;
+}
+
+.about-me .col-lg-4 img {
+  max-width: 100%;
+  height: auto;
+}
+
+.about-me .col-lg-8 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
 
 /*--------------------------------------------------------------
 # Counts
@@ -847,6 +865,12 @@ section .container {
   border-left: 3px solid #fff;
   transition: all 0.5s ease 0s;
   z-index: 9994;
+}
+
+.portfolio-image {
+  width: 1000%;
+  height: 400px; /* Adjust the height as needed */
+  object-fit: cover;
 }
 
 .portfolio .portfolio-wrap .portfolio-info::after {
