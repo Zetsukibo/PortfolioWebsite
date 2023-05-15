@@ -83,7 +83,7 @@ $user_data = mysqli_fetch_array($run);
           <img src="../images/<?=$user_data['admin_profile']?>" class="img-circle elevation-2" alt="User Image">
         </div>
         <div class="info">
-          <a href="#" class="d-block"><?=$user_data['fullname']?></a>
+          <a href="../index.php" class="d-block"><?=$user_data['fullname']?></a>
         </div>
       </div>
 
