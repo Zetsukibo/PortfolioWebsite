@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: May 08, 2023 at 03:53 PM
+-- Generation Time: May 15, 2023 at 08:19 AM
 -- Server version: 10.4.24-MariaDB
 -- PHP Version: 8.1.6
 
@@ -40,7 +40,28 @@ CREATE TABLE `about` (
 --
 
 INSERT INTO `about` (`id`, `about_title`, `about_subtitle`, `profile_pic`, `about_desc`) VALUES
-(1, 'Frontend Designer', 'This is a sample Subtitle b*tches', 'about.png', 'A front-end developer builds the front-end portion of websites and web applications—the part users see and interact with. A front-end developer creates websites and applications using web languages such as HTML, CSS, and JavaScript that allow users to access and interact with the site or app.');
+(1, 'Frontend Designer', '\"Crafting Seamless User Experiences: The Journey of a Frontend Designer\"', 'about.png', 'A frontend designer is a creative professional who specializes in designing and implementing the visual and interactive elements of a website or application. They play a crucial role in enhancing the user experience (UX) and ensuring that the frontend of a digital product is aesthetically appealing, user-friendly, and functional.\r\n\r\nFrontend designers possess a strong blend of artistic and technical skills. They have a deep understanding of design principles, typography, color theory, and layout composition. They leverage their creativity to conceptualize and produce visually engaging interfaces that align with the brand\'s identity and target audience.\r\n\r\nIn addition to their artistic abilities, frontend designers are proficient in various frontend technologies, such as HTML, CSS, and JavaScript. They possess a solid understanding of responsive design and are capable of implementing designs that adapt seamlessly to different screen sizes and devices.');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `admin`
+--
+
+CREATE TABLE `admin` (
+  `id` int(11) NOT NULL,
+  `fullname` varchar(255) NOT NULL,
+  `admin_profile` text NOT NULL,
+  `email` varchar(255) NOT NULL,
+  `password` varchar(255) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `admin`
+--
+
+INSERT INTO `admin` (`id`, `fullname`, `admin_profile`, `email`, `password`) VALUES
+(1, 'Cedric Noah', 'me.jpg', 'sample@gmail.com', '12345');
 
 -- --------------------------------------------------------
 
@@ -72,7 +93,7 @@ CREATE TABLE `home` (
   `id` int(11) NOT NULL,
   `title` varchar(255) NOT NULL,
   `subtitle` varchar(255) NOT NULL,
-  `showicons` int(1) NOT NULL
+  `showicons` varchar(255) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
@@ -80,7 +101,7 @@ CREATE TABLE `home` (
 --
 
 INSERT INTO `home` (`id`, `title`, `subtitle`, `showicons`) VALUES
-(1, 'Cedric Vico', 'I\'m a passionate backend developer from Philippines', 1);
+(1, 'Cedric Vicoo', 'I\'m a passionate Frontend developer from Rizal, Philippines', 'on');
 
 -- --------------------------------------------------------
 
@@ -99,8 +120,12 @@ CREATE TABLE `personal_info` (
 --
 
 INSERT INTO `personal_info` (`id`, `label`, `value`) VALUES
-(1, 'website', 'www.facebook.com'),
-(2, 'Email id', 'sample@gmail.com');
+(1, 'Name', 'Cedric Vico'),
+(2, 'Email', 'cedricvico@gmail.com'),
+(3, 'Birthday', 'December 25, 1999'),
+(4, 'Website', 'www.portfoliowebsite.com'),
+(5, 'Contact #', '09991234561'),
+(6, 'Freelance', 'Available');
 
 -- --------------------------------------------------------
 
@@ -121,7 +146,9 @@ CREATE TABLE `portfolio` (
 --
 
 INSERT INTO `portfolio` (`id`, `project_pic`, `project_type`, `project_name`, `project_link`) VALUES
-(1, 'me.jpg', 'fsdfa', 'fsdfas', 'fsfsad');
+(1, 'me.jpg', 'fsdfa', 'fsdfas', 'fsfsad'),
+(2, 'about.png', 'Sample', 'Sample', 'Sample.com'),
+(3, 'about.png', 'Sample', 'Sample', 'Sample.com');
 
 -- --------------------------------------------------------
 
@@ -143,8 +170,10 @@ CREATE TABLE `resume` (
 --
 
 INSERT INTO `resume` (`id`, `type`, `title`, `time`, `org`, `about_exp`) VALUES
-(1, 'e', 'Bachelor of Science in Computer Science', '2020 - 2023', 'Sample Org', 'sample exp sample exp sample exp sample exp sample exp sample exp sample expsample exp sample exp sample exp sample exp sample exp sample expsample expsample expsample expsample expsample expsample expsample expsample expsample expsample expsample expsample expsample expsample expsample expsample expsample expsample expsample expsample expsample expsample expsample expsample expsample expsample expsample exp'),
-(2, 'p', 'Frontend Developer', '2015 - 2020', 'sample org ', 'Frontend DeveloperFrontend DeveloperFrontend DeveloperFrontend DeveloperFrontend DeveloperFrontend DeveloperFrontend DeveloperFrontend DeveloperFrontend DeveloperFrontend DeveloperFrontend DeveloperFrontend DeveloperFrontend DeveloperFrontend DeveloperFrontend DeveloperFrontend DeveloperFrontend DeveloperFrontend DeveloperFrontend Developer');
+(1, 'e', 'Bachelor of Science in Computer Science', '2020 - 2023', 'CCIS', 'Frontend developers typically have experience in creating and implementing user interfaces for websites or applications using frontend technologies such as HTML, CSS, and JavaScript. They have a solid understanding of responsive design principles and can adapt designs to different screen sizes and devices.'),
+(6, 'p', 'Full Stack Feveloper', '2020-2023', 'Polytechnic University of the Philippines', 'As a full stack developer, I have gained extensive experience working with both frontend and backend technologies, allowing me to effectively contribute to the entire software development process. Over the years, I have successfully completed various projects, honing my skills in multiple programming languages, frameworks, and databases. '),
+(7, 'p', 'Frontend Developer', '2015 - 2020', 'sample org ', 'Frontend developers often work closely with designers and backend developers to ensure the seamless integration of design and functionality. They may collaborate in agile development teams, participate in brainstorming sessions, and provide input on UI/UX decisions.\r\n\r\nAdditionally, frontend developers are proficient in using various libraries, frameworks, and tools such as Bootstrap, React, Angular, Vue.js, or jQuery to enhance the frontend development process and create interactive and dynamic user experiences.'),
+(8, 'e', 'ICT', '2018 - 2020', 'ICT org', 'As an ICT (Information and Communication Technology) student, I have gained a valuable and enriching experience in various aspects of the field. Throughout my academic journey, I have had the opportunity to learn and work on a wide range of technologies, software, and systems, which has equipped me with practical skills and knowledge.\r\n\r\nOne aspect of my experience as an ICT student is the foundation in programming and software development. I have learned multiple programming languages such as Java, Python, C++, and JavaScript. I have worked on projects that involved developing desktop applications, web applications, and mobile apps. This hands-on experience has allowed me to understand the fundamentals of programming, software architecture, and the importance of writing clean and efficient code.');
 
 -- --------------------------------------------------------
 
@@ -154,12 +183,12 @@ INSERT INTO `resume` (`id`, `type`, `title`, `time`, `org`, `about_exp`) VALUES
 
 CREATE TABLE `section_control` (
   `id` int(11) NOT NULL,
-  `home_section` int(11) NOT NULL,
-  `about_section` int(11) NOT NULL,
-  `resume_section` int(11) NOT NULL,
-  `services_section` int(11) NOT NULL,
-  `portfolio_section` int(11) NOT NULL,
-  `contact_section` int(11) NOT NULL
+  `home_section` varchar(255) NOT NULL,
+  `about_section` varchar(255) NOT NULL,
+  `resume_section` varchar(255) NOT NULL,
+  `services_section` varchar(255) NOT NULL,
+  `portfolio_section` varchar(255) NOT NULL,
+  `contact_section` varchar(255) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
@@ -167,7 +196,7 @@ CREATE TABLE `section_control` (
 --
 
 INSERT INTO `section_control` (`id`, `home_section`, `about_section`, `resume_section`, `services_section`, `portfolio_section`, `contact_section`) VALUES
-(1, 1, 1, 1, 1, 1, 1);
+(1, 'on', 'on', 'on', 'on', 'on', 'on');
 
 -- --------------------------------------------------------
 
@@ -188,7 +217,7 @@ CREATE TABLE `seo` (
 --
 
 INSERT INTO `seo` (`id`, `page_title`, `keywords`, `description`, `siteicon`) VALUES
-(0, 'tret', 'tertew', 'tertwe', 'tertew');
+(1, 'Sample', 'nice', 'Sample', '1684127855apple-touch-icon.png');
 
 -- --------------------------------------------------------
 
@@ -206,7 +235,7 @@ CREATE TABLE `site_background` (
 --
 
 INSERT INTO `site_background` (`id`, `background_img`) VALUES
-(1, 'me.jpg');
+(1, '1684077289bg.jpg');
 
 -- --------------------------------------------------------
 
@@ -229,7 +258,6 @@ INSERT INTO `skills` (`id`, `skill_name`, `skill_level`) VALUES
 (2, 'CSS', 100),
 (3, 'Python', 90),
 (4, 'Javascript', 100),
-(5, 'Monog', 95),
 (6, 'Tailwind CSS', 100),
 (7, 'Java', 100);
 
@@ -264,6 +292,12 @@ INSERT INTO `social_media` (`id`, `twitter`, `facebook`, `instagram`, `skype`, `
 -- Indexes for table `about`
 --
 ALTER TABLE `about`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `admin`
+--
+ALTER TABLE `admin`
   ADD PRIMARY KEY (`id`);
 
 --
@@ -303,6 +337,12 @@ ALTER TABLE `section_control`
   ADD PRIMARY KEY (`id`);
 
 --
+-- Indexes for table `seo`
+--
+ALTER TABLE `seo`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- Indexes for table `site_background`
 --
 ALTER TABLE `site_background`
@@ -331,6 +371,12 @@ ALTER TABLE `about`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
+-- AUTO_INCREMENT for table `admin`
+--
+ALTER TABLE `admin`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+
+--
 -- AUTO_INCREMENT for table `contact`
 --
 ALTER TABLE `contact`
@@ -346,24 +392,30 @@ ALTER TABLE `home`
 -- AUTO_INCREMENT for table `personal_info`
 --
 ALTER TABLE `personal_info`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 
 --
 -- AUTO_INCREMENT for table `portfolio`
 --
 ALTER TABLE `portfolio`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
 -- AUTO_INCREMENT for table `resume`
 --
 ALTER TABLE `resume`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
 
 --
 -- AUTO_INCREMENT for table `section_control`
 --
 ALTER TABLE `section_control`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+
+--
+-- AUTO_INCREMENT for table `seo`
+--
+ALTER TABLE `seo`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
