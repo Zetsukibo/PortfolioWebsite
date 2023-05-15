@@ -58,7 +58,7 @@ $user_data = mysqli_fetch_array($run);
       <!-- Notifications Dropdown Menu -->
      
       <li class="nav-item">
-        <a class="nav-link" href="../include/logout.php">
+        <a class="nav-link" href="../logout.php">
           Logout
         </a>
       </li>
@@ -72,7 +72,7 @@ $user_data = mysqli_fetch_array($run);
     <a href="index.php" class="brand-link">
       <img src="../images/about.png" alt="AdminLTE Logo" class="brand-image img-circle elevation-3"
            style="opacity: .8">
-      <span class="brand-text font-weight-light">Admin Panel</span>
+      <span class="brand-text font-weight-light">Account Panel</span>
     </a>
 
     <!-- Sidebar -->
