@@ -1019,6 +1019,21 @@ section .container {
   margin: 10px 0 8px 68px;
 }
 
+.contact .info-boxx {
+  padding: 20px;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+}
+
+.contact .info-boxx h4 {
+  font-size: 7px;
+  color: rgba(255, 255, 255, 0.5);
+  font-weight: 700;
+  margin: 10px 0 8px 68px;
+}
+
+
 .contact .info-box p {
   padding: 0;
   color: #fff;
@@ -1028,7 +1043,7 @@ section .container {
 }
 
 .contact .info-box .social-links {
-  margin: 5px 0 0 68px;
+  margin: 10px 0 0 68px;
   display: flex;
 }
 
@@ -1037,7 +1052,7 @@ section .container {
   display: inline-block;
   color: #fff;
   line-height: 1;
-  margin-right: 12px;
+  margin-right: 20px;
   transition: 0.3s;
 }
 

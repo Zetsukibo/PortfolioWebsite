@@ -217,7 +217,7 @@ $user_data = mysqli_fetch_array($run);
               </ul>
             </div>
           </div>
-          <p>
+          <p style="text-align: justify;">
             <?= $user_data['about_desc'] ?>
           </p>
         </div>
@@ -402,8 +402,8 @@ $user_data = mysqli_fetch_array($run);
 
           <div class="swiper-slide">
             <div class="testimonial-item">
-              <p>
-                <i class="bx bxs-quote-alt-left quote-icon-left"></i>
+              <p style="text-align: justify;">
+                <i class="bx bxs-quote-alt-left quote-icon-left" ></i>
                 Working with Cedric was an absolute pleasure. Their attention to detail and design skills are exceptional. They took our vision and transformed it into a stunning and user-friendly website. The frontend code they delivered was clean, well-structured, and optimized for performance. Our users love the intuitive interface and seamless navigation. I highly recommend Cedric Vico for any frontend development project.
                 <i class="bx bxs-quote-alt-right quote-icon-right"></i>
               </p>
@@ -415,7 +415,7 @@ $user_data = mysqli_fetch_array($run);
 
           <div class="swiper-slide">
             <div class="testimonial-item">
-              <p>
+              <p style="text-align: justify;">
                 <i class="bx bxs-quote-alt-left quote-icon-left"></i>
                 Working with Cedric was an absolute pleasure. Their attention to detail and design skills are exceptional. They took our vision and transformed it into a stunning and user-friendly website. The frontend code they delivered was clean, well-structured, and optimized for performance. Our users love the intuitive interface and seamless navigation. I highly recommend Cedric Vico for any frontend development project.
                 <i class="bx bxs-quote-alt-right quote-icon-right"></i>
@@ -428,7 +428,7 @@ $user_data = mysqli_fetch_array($run);
 
           <div class="swiper-slide">
             <div class="testimonial-item">
-              <p>
+              <p style="text-align: justify;">
                 <i class="bx bxs-quote-alt-left quote-icon-left"></i>
                 Working with Cedric was an absolute pleasure. Their attention to detail and design skills are exceptional. They took our vision and transformed it into a stunning and user-friendly website. The frontend code they delivered was clean, well-structured, and optimized for performance. Our users love the intuitive interface and seamless navigation. I highly recommend Cedric Vico for any frontend development project.
                 <i class="bx bxs-quote-alt-right quote-icon-right"></i>
@@ -441,7 +441,7 @@ $user_data = mysqli_fetch_array($run);
 
           <div class="swiper-slide">
             <div class="testimonial-item">
-              <p>
+              <p style="text-align: justify;">
                 <i class="bx bxs-quote-alt-left quote-icon-left"></i>
                 Working with Cedric was an absolute pleasure. Their attention to detail and design skills are exceptional. They took our vision and transformed it into a stunning and user-friendly website. The frontend code they delivered was clean, well-structured, and optimized for performance. Our users love the intuitive interface and seamless navigation. I highly recommend Cedric Vico for any frontend development project.
                 <i class="bx bxs-quote-alt-right quote-icon-right"></i>
@@ -454,7 +454,7 @@ $user_data = mysqli_fetch_array($run);
 
           <div class="swiper-slide">
             <div class="testimonial-item">
-              <p>
+              <p style="text-align: justify;">
                 <i class="bx bxs-quote-alt-left quote-icon-left"></i>
                 Working with Cedric was an absolute pleasure. Their attention to detail and design skills are exceptional. They took our vision and transformed it into a stunning and user-friendly website. The frontend code they delivered was clean, well-structured, and optimized for performance. Our users love the intuitive interface and seamless navigation. I highly recommend Cedric Vico for any frontend development project.
                 <i class="bx bxs-quote-alt-right quote-icon-right"></i>
@@ -747,8 +747,12 @@ $user_data = mysqli_fetch_array($run);
         </div>
       </div>
 
+      
       <form action="forms/contact.php" method="post" role="form" class="php-email-form mt-4">
         <div class="row">
+            <div class="info-boxx">
+              <h4 style=" text-align: center; margin-bottom: 40px; font-weight: bold;">Feedback Form</h4>
+            </div>
           <div class="col-md-6 form-group">
             <input type="text" name="name" class="form-control" id="name" placeholder="Your Name" required>
           </div>
