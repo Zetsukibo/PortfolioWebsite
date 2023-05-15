@@ -43,6 +43,18 @@ section{
     z-index: 100;
 }
 
+.logo {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+  }
+  
+  .logo-image {
+    width: 50px; /* Adjust the width to match the desired size of your logo */
+    height: auto; /* Adjust the height if necessary */
+    margin-right: 10px; /* Add some spacing between the logo and the text */
+  }
+
 .headings{
     margin-bottom: 3rem;
     text-align: center;
@@ -94,17 +106,17 @@ section{
 }
 
 .home-img img{
-    width: 25vw;
-    margin-right: 10rem;
+    width: 24vw;
+    margin-right: 8rem;
 }
 
 .homexiao-img img{
-    width: 25vw;
+    width: 30vw;
     margin-left: 10rem;
 }
 
 .home-content h3{
-    font-size: 6.4rem;
+    font-size: 6rem;
     font-weight: 700;
 }
 
@@ -117,14 +129,14 @@ span{
 }
 
 .home-content h1{
-    font-size: 8rem;
+    font-size: 7rem;
     font-style: italic;
     font-weight: 700;
     line-height: 1.3;
 }
 
 .home-content p{
-    margin-top: 3rem;
+    margin-top: 2rem;
     font-size: 2.0rem;
 }
 
@@ -220,7 +232,7 @@ span{
 }
 
 .about-content p{
-    font-size: 2rem;
+    font-size: 1.5rem;
     margin: 2rem 0 3rem;
     text-align: justify;
     text-indent: 6%;

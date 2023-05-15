@@ -21,8 +21,8 @@ if(isset($_POST['login'])){
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <title>Art Abode | Log in</title>
-  <link href="../images/about.png" rel="icon">
-  <link href="../images/about.png" rel="apple-touch-icon">
+  <link href="images/logo.png" rel="icon">
+  <link href="images/logo.png" rel="apple-touch-icon">
   <!-- Tell the browser to be responsive to screen width -->
   <meta name="viewport" content="width=device-width, initial-scale=1">
 

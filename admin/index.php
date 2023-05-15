@@ -15,8 +15,8 @@ $user_data = mysqli_fetch_array($run);
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <title>User Account | Dashboard</title>
    <!-- Favicons -->
- <link href="../images/about.png" rel="icon">
-  <link href="../images/about.png" rel="apple-touch-icon">
+ <link href="../images/logo.png" rel="icon">
+  <link href="../images/logo.png" rel="apple-touch-icon">
   <!-- Tell the browser to be responsive to screen width -->
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <!-- Font Awesome -->
@@ -77,7 +77,6 @@ $user_data = mysqli_fetch_array($run);
 
     <!-- Sidebar -->
     <div class="sidebar">
-      <!-- Sidebar user panel (optional) -->
       <div class="user-panel mt-3 pb-3 mb-3 d-flex">
         <div class="image">
           <img src="../images/<?=$user_data['admin_profile']?>" class="img-circle elevation-2" alt="User Image">
@@ -89,9 +88,7 @@ $user_data = mysqli_fetch_array($run);
 
       <!-- Sidebar Menu -->
       <nav class="mt-2">
-        <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
-          <!-- Add icons to the links using the .nav-icon class
-               with font-awesome or any other icon font library -->
+        <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">  
           <li class="nav-item menu-open">
             <a href="index.php" class="nav-link">
             <i class="fa fa-th-large" aria-hidden="true"></i>
@@ -227,7 +224,7 @@ $user_data = mysqli_fetch_array($run);
         <div class="row">
           <?php
           if(isset($_GET['homesetting'])){ ?>
-<div class="card card-primary col-lg-12">
+        <div class="card card-primary col-lg-12">
               <div class="card-header">
                 <h3 class="card-title">Update Home</h3>
               </div>
@@ -991,11 +988,11 @@ $user_data = mysqli_fetch_array($run);
 <!-- overlayScrollbars -->
 <script src="plugins/overlayScrollbars/js/jquery.overlayScrollbars.min.js"></script>
 <!-- AdminLTE App -->
-<script src="dist/js/admin.js"></script>
+<script src="dist/js/adminlte.js"></script>
 <!-- AdminLTE dashboard demo (This is only for demo purposes) -->
 <script src="dist/js/pages/dashboard.js"></script>
 <!-- AdminLTE for demo purposes -->
 <script src="dist/js/demo.js"></script>
-
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
