@@ -21,18 +21,18 @@
     
     <!-- header design -->
     <header class="header">
-        <a href="./index.html"  src="../images/logo.png" class="logo">Art Abode</a>
+        <a href="./home.html"  src="../images/logo.png" class="logo">Art Abode</a>
 
         <i class='bx bx-menu' id="menu-icon"></i>
 
-        <nav  class="navbar">
-            <a href="#home" class="active">Home</a>
-            <a href="#about">About</a>
-            <a href="#services">Services</a>
-            <a href="#members">Portfolios</a>
-            <a href="#contact">Contact</a>
-            
+        <nav class="navbar">
+            <a href="#home" id="home-link" class="active">Home</a>
+            <a href="#about" id="about-link">About</a>
+            <a href="#services" id="services-link">Services</a>
+            <a href="#members" id="members-link">Portfolios</a>
+            <a href="#contact" id="contact-link">Contact</a>
         </nav>
+
         <nav class="navbar2">
             <a href="../admin/register.html" class="btn1"><b>Sign Up</b></a>
             <a>or</a>
@@ -106,7 +106,7 @@
 
     <!-- members section design -->
     <section class="members" id="members">
-        <h2 class="heading">Group 4 <span>Members</span></h2>
+        <h2 class="heading">Port<span>folios</span></h2>
 
         <div class="members-container">
             <div class="members-box">
@@ -189,5 +189,23 @@
     </footer>
 
     
+    <script>
+        // Get all the navigation links
+        const links = document.querySelectorAll(".navbar a");
+    
+        // Add event listeners to each link
+        links.forEach(link => {
+            link.addEventListener("click", function(event) {
+                // Remove the "active" class from all links
+                links.forEach(link => {
+                    link.classList.remove("active");
+                });
+    
+                // Add the "active" class to the clicked link
+                this.classList.add("active");
+            });
+        });
+    </script>
+
 </body>
 </html>
