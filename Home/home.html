@@ -191,14 +191,18 @@
             </div>
 
              <!-- Pagination -->
-             <div class="pagination">
-                <a href="#" class="arrow" id="prevPage">&lt;&lt;</a>
-                <a href="#" class="arrow" id="prev">&lt;</a>
-                <a href="#" class="active page" id="page1">1</a>
-                <a href="#" class="page" id="page2">2</a>
-                <a href="#" class="page" id="page3">3</a>
-                <a href="#" class="arrow" id="next">&gt;</a>
-                <a href="#" class="arrow" id="nextPage">&gt;&gt;</a>
+             <div class="pagination" style="cursor: pointer;">
+                <a class="arrow">&lt;&lt;</a>
+                <a class="arrow">&lt;</a>
+                <a class="page-number active">1</a>
+                <a class="page-number">2</a>
+                <a class="page-number">3</a>
+                <a class="page-number">4</a>
+                <a class="page-number">5</a>
+                <a class="page-number">6</a>
+                <a class="page-number">7</a>
+                <a class="arrow">&gt;</a>
+                <a class="arrow">&gt;&gt;</a>
             </div>
         </div>
     </section>
@@ -269,6 +273,24 @@
         }
 
         window.addEventListener("resize", checkScreenWidth);
+    </script>
+
+    <script>
+        // Get all the page numbers
+        const pageNumbers = document.querySelectorAll('.page-number');
+
+        // Add click event listeners to each page number
+        pageNumbers.forEach((pageNumber) => {
+            pageNumber.addEventListener('click', () => {
+                // Remove active class from all page numbers
+                pageNumbers.forEach((number) => {
+                    number.classList.remove('active');
+                });
+
+                // Add active class to the clicked page number
+                pageNumber.classList.add('active');
+            });
+        });
     </script>
     
 </body>
