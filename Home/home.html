@@ -15,6 +15,39 @@
 
     <!-- custom css -->
     <link rel="stylesheet" href="home.css">
+    <style>
+     .navbar {
+            display: none;
+        }
+
+        .show {
+            display: block;
+        }
+
+        /* CSS styles for the responsive menu */
+        #menu-icon {
+            display: none;
+            /* Add styling for the menu icon */
+        }
+
+        @media (max-width: 768px) { /* Adjust the breakpoint as needed */
+            .navbar.responsive, .navbar2.responsive {
+                display: block;
+                justify-content: center;
+                align-items: center;
+                text-align: center;
+            }
+
+            .show {
+                display: none;
+            }
+
+            #menu-icon {
+                display: block;
+                /* Add styling for the menu icon */
+            }
+        }
+    </style>
 </head>
 
 <body>
@@ -22,24 +55,24 @@
     <!-- header design -->
     <header class="header">
         <a href="./home.html" class="logo"><b style="color: #1DB954;">Art </b><b style="color: #FFF;"> Abode</b></a>
-
+    
         <i class='bx bx-menu' id="menu-icon"></i>
-
-        <nav class="navbar">
+    
+        <nav class="navbar show">
             <a href="#home" id="home-link" class="active">Home</a>
             <a href="#about" id="about-link">About</a>
             <a href="#services" id="services-link">Services</a>
             <a href="#portfolio" id="portfolio-link">Portfolios</a>
             <a href="#contact" id="contact-link">Contact</a>
         </nav>
-
+    
         <nav class="navbar2">
             <a href="../admin/register.html" class="btn1"><b>Sign Up</b></a>
             <a>or</a>
             <a href="../login.php" class="btn1"><b>Login</b></a>
         </nav>
     </header>
-
+    
     <!-- home section design -->
     <section class="home" id="home">
         <div class="home-content">
@@ -205,6 +238,26 @@
                 this.classList.add("active");
             });
         });
+        
+    </script>
+    <script>
+        const menuIcon = document.getElementById("menu-icon");
+        const navbar = document.querySelector(".navbar");
+        const navbar2 = document.querySelector(".navbar2");
+
+        menuIcon.addEventListener("click", function () {
+            navbar.classList.toggle("responsive");
+            navbar2.classList.toggle("responsive");
+        });
+
+        function checkScreenWidth() {
+            if (window.innerWidth > 768) { // Adjust the breakpoint as needed
+                navbar.classList.remove("responsive");
+                navbar2.classList.remove("responsive");
+            }
+        }
+
+        window.addEventListener("resize", checkScreenWidth);
     </script>
 
 </body>

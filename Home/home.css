@@ -80,11 +80,11 @@ section{
 # navbar
 --------------------------------------------------------------*/
 
-.navbar a{
-    font-size:2.2rem;
+.navbar a {
+    font-size: 2.2rem;
     color: var(--text-color);
     margin-left: 4rem;
-    transition: .3s;
+    transition: 0.3s;
 }
 
 .navbar a:hover,
@@ -92,24 +92,38 @@ section{
     color: var(--main-color);
 }
 
-.navbar2 a{
-    font-size: 1.7rem;
-    color: var(--text-color);
-    margin-left: 1rem;
-    transition: .3s;
+.navbar2.responsive {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 1rem;
 }
 
-.navbar2 a.btn1 {
+.navbar2.responsive a {
+    font-size: 1.6rem; /* Adjust the font size as desired */
+    color: var(--text-color);
+    margin-left: 1rem;
+    transition: 0.3s;
+}
+
+.navbar2.responsive a.btn1 {
     color: var(--second-bg-color);
 }
 
+.navbar2.responsive a:hover {
+    color: var(--main-color); /* Adjust the hover color as desired */
+}
+
+.navbar2.responsive a:hover.btn1 {
+    color: var(--text-color); /* Adjust the hover color as desired */
+    background-color: var(--second-bg-color); /* Adjust the hover background color as desired */
+}
 
 #menu-icon{
     font-size: 3.6rem;
     color: var(--text-color);
     display: none;
 }
-
 
 /*--------------------------------------------------------------
 # Home
@@ -470,4 +484,51 @@ span{
 .footer-iconTop a i{
     font-size: 2.4rem;
     color: var(--second-bg-color);
+}
+
+
+@media screen and (max-width: 768px) {
+    .header {
+        padding: 2rem 5%;
+    }
+
+    .navbar {
+        /* Remove the display: none; property */
+    }
+
+    .navbar2 {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .navbar2 a {
+        margin: 0 0.8rem; /* Adjust the margin as desired */
+    }
+
+    #menu-icon {
+        display: block;
+    }
+
+    .home {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .home-img {
+        margin-right: 0;
+        margin-bottom: 4rem;
+    }
+
+    .home-img img {
+        width: 70%;
+    }
+
+    .home-content h3 {
+        font-size: 4rem;
+    }
+
+    .home-content h1 {
+        font-size: 5rem;
+    }
 }
