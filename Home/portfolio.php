@@ -174,7 +174,7 @@ $user_data = mysqli_fetch_array($run);
 
       <div class="row">
         <div class="col-lg-4" data-aos="fade-right">
-           <img src="images/<?= $user_data['profile_pic'] ?>" class="img-fluid" alt="">
+           <img src="../images/<?= $user_data['profile_pic'] ?>" class="img-fluid" alt="">
         </div>
         <div class="col-lg-8 pt-4 pt-lg-0 content" data-aos="fade-left">
           <h3>
@@ -627,6 +627,12 @@ $user_data = mysqli_fetch_array($run);
 
       <div class="row">
         <div class="col-lg-12 d-flex justify-content-center">
+        <ul id="portfolio-flters">
+            <li data-filter="*" class="filter-active">All</li>
+            <li data-filter=".filter-app">App</li>
+            <li data-filter=".filter-card">Card</li>
+            <li data-filter=".filter-web">Web</li>
+          </ul>
         </div>
       </div>
 
@@ -648,10 +654,9 @@ $user_data = mysqli_fetch_array($run);
                   <?= $portfolio['project_type'] ?>
                 </p>
                 <div class="portfolio-links">
-                  <a href="../images/<?= $portfolio['project_pic'] ?>" data-gall="portfolioGallery" class="venobox"
-                    title="App 1"><i class="bx bx-plus"></i></a>
-                  <a href="<?= $portfolio['project_link'] ?>" data-gall="portfolioDetailsGallery" data-vbtype="iframe"
-                    class="venobox" title="Portfolio Details"><i class="bx bx-link"></i></a>
+                  <a href="../images/<?= $portfolio['project_pic'] ?>" data-gallery="portfolioGallery" class="portfolio-lightbox"
+                    title="<?= $portfolio['project_name'] ?>"><i class="bx bx-plus"></i></a>
+                  <a href="<?= $portfolio['project_link'] ?>" data-gallery="portfolioDetailsGallery" data-glightbox="type: external" class="portfolio-details-lightbox" title="Portfolio Details"><i class="bx bx-link"></i></a>
                 </div>
               </div>
             </div>
