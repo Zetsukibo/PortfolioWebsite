@@ -64,10 +64,13 @@ $user_data = mysqli_fetch_array($run);
 <body>
 <div class="background-image"></div>
   <!-- ======= Header ======= -->
-  <header id="header">
-    <div class="container">
+  <header class="header "id="header">
 
-      <h1><a href="index.php">
+
+    <div class="container">
+    <!--  <img src="../images/logo.png" class="img-fluid" alt="" style="width: 4vw; cursor: pointer; font-style: italic; margin-top: -190px;margin-bottom: 150px; margin-left: -100px; "> -->
+      <a href="./home.html" class="logo" style=" display: flex; align-items: center; text-decoration: none; font-size: 1.5rem; color: var(--text-color); margin-top: -190px;margin-bottom: 180px; margin-left: -40px; font-style: italic; font-weight: 600; cursor: pointer;"><b style="color: #1DB954;">Art </b><b style="color: #FFF;">Abode</b></a>
+      <h1><a href="portfolio.php">
           <?= $user_data['title'] ?>
         </a></h1>
       <h2>

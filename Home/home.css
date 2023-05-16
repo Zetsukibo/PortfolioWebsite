@@ -1,3 +1,8 @@
+
+/*--------------------------------------------------------------
+# General
+--------------------------------------------------------------*/
+
 *{
     margin: 0;
     padding: 0;
@@ -30,6 +35,11 @@ section{
     padding: 10rem 9% 2rem;
 }
 
+
+/*--------------------------------------------------------------
+# Header
+--------------------------------------------------------------*/
+
 .header{
     position: fixed;
     top: 0;
@@ -47,9 +57,13 @@ section{
     display: flex;
     align-items: center;
     text-decoration: none;
+    font-size: 2.5rem;
+    color: var(--text-color);
+    font-weight: 600;
+    cursor: default;
   }
-  
-  .logo-image {
+
+ .logo-image {
     width: 50px; /* Adjust the width to match the desired size of your logo */
     height: auto; /* Adjust the height if necessary */
     margin-right: 10px; /* Add some spacing between the logo and the text */
@@ -62,12 +76,9 @@ section{
     color: rgb(169, 167, 167);
 }
 
-.logo{
-    font-size: 2.5rem;
-    color: var(--text-color);
-    font-weight: 600;
-    cursor: default;
-}
+/*--------------------------------------------------------------
+# navbar
+--------------------------------------------------------------*/
 
 .navbar a{
     font-size:2.2rem;
@@ -98,6 +109,11 @@ section{
     color: var(--text-color);
     display: none;
 }
+
+
+/*--------------------------------------------------------------
+# Home
+--------------------------------------------------------------*/
 
 .home{
     display: flex;
@@ -195,6 +211,11 @@ span{
     box-shadow: none;
 }
 
+
+/*--------------------------------------------------------------
+# about
+--------------------------------------------------------------*/
+
 .about{
     display: flex;
     justify-content: center;
@@ -238,6 +259,11 @@ span{
     text-indent: 6%;
 }
 
+
+/*--------------------------------------------------------------
+# services
+--------------------------------------------------------------*/
+
 .services h2{
     margin-bottom: 10rem;
 }
@@ -279,15 +305,20 @@ span{
     margin: 1rem 0 3rem;
 }
 
-.members{
+
+/*--------------------------------------------------------------
+# Portfolio
+--------------------------------------------------------------*/
+
+.portfolio{
     background: var(--second-bg-color);
 }
 
-.members h2{
+.portfolio h2{
     margin-bottom: 7rem;   
 }
 
-.members-container{
+.portfolio-container{
     display: flex;
     flex-wrap: wrap; 
     justify-content: center; 
@@ -296,7 +327,7 @@ span{
     margin-bottom: 1.5rem;  
 }
 
-.members-container .members-box{
+.portfolio-container .portfolio-box{
     position: relative;
     border-radius: 2rem;
     box-shadow: 0 0 1rem var(--bg-color);
@@ -304,17 +335,17 @@ span{
     display: flex;
 }
 
-.members-box img{
+.portfolio-box img{
     width: 230px;
     height: 350px;
     transition: .5s ease;
 }
 
-.members-box:hover img{
+.portfolio-box:hover img{
     transform: scale(1.1);
 }
 
-.members-box .members-layer{
+.portfolio-box .portfolio-layer{
     position: absolute;
     bottom: 0;
     left: 0;
@@ -331,20 +362,20 @@ span{
     transition: .5s ease;
 }
 
-.members-box:hover .members-layer{
+.portfolio-box:hover .portfolio-layer{
     transform: translateY(0);
 }
 
-.members-layer h4{
+.portfolio-layer h4{
     font-size: 2rem;
 }
 
-.members-layer p{
+.portfolio-layer p{
     font-size:1rem;
     margin: .3rem 0 1rem;
 }
 
-.members-layer a{
+.portfolio-layer a{
     display: inline-flex;
     justify-content: center;
     align-items: center;
@@ -354,10 +385,14 @@ span{
     border-radius: 50%;
 }
 
-.members-layer a i{
+.portfolio-layer a i{
     font-size: 2rem;
     color: var(--second-bg-color);
 }
+
+/*--------------------------------------------------------------
+# Contact
+--------------------------------------------------------------*/
 
 .contact h2{
     margin-bottom: 3rem;
@@ -399,6 +434,11 @@ span{
     margin-top: 2rem;
     cursor: pointer;
 }
+
+
+/*--------------------------------------------------------------
+# Footer
+--------------------------------------------------------------*/
 
 .footer{
     display: flex;
