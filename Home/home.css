@@ -53,20 +53,29 @@ section{
     z-index: 100;
 }
 
+.header img {
+    display: flex;
+    width: 50px;
+    height: auto;
+}
+
 .logo {
     display: flex;
-    align-items: center;
+    align-items: left;
     text-decoration: none;
+<<<<<<< Updated upstream
     font-size: 2.5rem;
     color: var(--text-color);
     font-weight: 600;
     cursor: default;
+=======
+    margin-right: 100px;
+>>>>>>> Stashed changes
   }
 
  .logo-image {
     width: 50px; /* Adjust the width to match the desired size of your logo */
     height: auto; /* Adjust the height if necessary */
-    margin-right: 10px; /* Add some spacing between the logo and the text */
   }
 
 .headings{
