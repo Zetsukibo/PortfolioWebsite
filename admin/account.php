@@ -69,7 +69,7 @@ $user_data = mysqli_fetch_array($run);
   <!-- Main Sidebar Container -->
   <aside class="main-sidebar sidebar-dark-primary elevation-4">
     <!-- Brand Logo -->
-    <a href="index.php" class="brand-link">
+    <a href="account.php" class="brand-link">
       <img src="../images/about.png" alt="AdminLTE Logo" class="brand-image img-circle elevation-3"
            style="opacity: .8">
       <span class="brand-text font-weight-light">Account Panel</span>
@@ -90,7 +90,7 @@ $user_data = mysqli_fetch_array($run);
       <nav class="mt-2">
         <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">  
           <li class="nav-item menu-open">
-            <a href="index.php" class="nav-link">
+            <a href="account.php" class="nav-link">
             <i class="fa fa-th-large" aria-hidden="true"></i>
 
               <p>
@@ -100,7 +100,7 @@ $user_data = mysqli_fetch_array($run);
             
           </li>
           <li class="nav-item menu-open">
-            <a href="index.php?homesetting=true" class="nav-link">
+            <a href="account.php?homesetting=true" class="nav-link">
             <i class="fa fa-home" aria-hidden="true"></i>
 
 
@@ -111,7 +111,7 @@ $user_data = mysqli_fetch_array($run);
             
           </li>
           <li class="nav-item menu-open">
-            <a href="index.php?aboutsetting=true" class="nav-link">
+            <a href="account.php?aboutsetting=true" class="nav-link">
             <i class="fa fa-question-circle" aria-hidden="true"></i>
 
 
@@ -122,7 +122,7 @@ $user_data = mysqli_fetch_array($run);
             
           </li>
           <li class="nav-item menu-open">
-            <a href="index.php?resumesetting=true" class="nav-link">
+            <a href="account.php?resumesetting=true" class="nav-link">
             <i class="fa fa-briefcase" aria-hidden="true"></i>
 
 
@@ -133,7 +133,7 @@ $user_data = mysqli_fetch_array($run);
             
           </li>
           <li class="nav-item menu-open">
-            <a href="index.php?portfoliosetting=true" class="nav-link">
+            <a href="account.php?portfoliosetting=true" class="nav-link">
             <i class="fa fa-desktop" aria-hidden="true"></i>
 
 
@@ -144,7 +144,7 @@ $user_data = mysqli_fetch_array($run);
             
           </li>
           <li class="nav-item menu-open">
-            <a href="index.php" class="nav-link">
+            <a href="account.php" class="nav-link">
             <i class="fa fa-th-large" aria-hidden="true"></i>
 
               <p>
@@ -154,7 +154,7 @@ $user_data = mysqli_fetch_array($run);
             
           </li>
           <li class="nav-item menu-open">
-            <a href="index.php?contactsetting=true" class="nav-link">
+            <a href="account.php?contactsetting=true" class="nav-link">
             <i class="fa fa-phone" aria-hidden="true"></i>
 
 
@@ -166,7 +166,7 @@ $user_data = mysqli_fetch_array($run);
             
           </li>
           <li class="nav-item menu-open">
-            <a href="index.php?changebackground=true" class="nav-link">
+            <a href="account.php?changebackground=true" class="nav-link">
             <i class="fa fa-cog" aria-hidden="true"></i>
 
 
@@ -178,7 +178,7 @@ $user_data = mysqli_fetch_array($run);
             
           </li>
           <li class="nav-item menu-open">
-            <a href="index.php?seosetting=true" class="nav-link">
+            <a href="account.php?seosetting=true" class="nav-link">
             <i class="fa fa-search" aria-hidden="true"></i>
 
 
@@ -190,7 +190,7 @@ $user_data = mysqli_fetch_array($run);
             
           </li>
           <li class="nav-item menu-open">
-            <a href="index.php?accountsetting=true" class="nav-link">
+            <a href="account.php?accountsetting=true" class="nav-link">
             <i class="fa fa-user" aria-hidden="true"></i>
 
 

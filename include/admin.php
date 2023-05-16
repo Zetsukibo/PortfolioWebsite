@@ -19,7 +19,7 @@ if(isset($_POST['update-section'])){
 
     $run = mysqli_query($db,$query);
     if($run){
-  echo "<script>window.location.href='../admin/index.php';</script>";                    
+  echo "<script>window.location.href='../admin/account.php';</script>";                    
 
     }
 
@@ -43,7 +43,7 @@ if(isset($_POST['update-home'])){
 
     $run = mysqli_query($db,$query);
     if($run){
-  echo "<script>window.location.href='../admin/index.php?homesetting=true';</script>";                    
+  echo "<script>window.location.href='../admin/account.php?homesetting=true';</script>";                    
 
     }
 
@@ -81,7 +81,7 @@ if(isset($_POST['update-about'])){
 
     $run = mysqli_query($db,$query);
     if($run){
-  echo "<script>window.location.href='../admin/index.php?aboutsetting=true';</script>";                    
+  echo "<script>window.location.href='../admin/account.php?aboutsetting=true';</script>";                    
 
     }
 
@@ -101,7 +101,7 @@ $skilllevel = $_POST['skilllevel'];
     
     $run = mysqli_query($db,$query);
     if($run){
-  echo "<script>window.location.href='../admin/index.php?aboutsetting=true';</script>";                    
+  echo "<script>window.location.href='../admin/account.php?aboutsetting=true';</script>";                    
 
     }
 
@@ -115,7 +115,7 @@ if(isset($_POST['add-pi'])){
         
         $run = mysqli_query($db,$query);
         if($run){
-      echo "<script>window.location.href='../admin/index.php?aboutsetting=true';</script>";                    
+      echo "<script>window.location.href='../admin/account.php?aboutsetting=true';</script>";                    
     
         }
     
@@ -143,7 +143,7 @@ if(isset($_POST['add-pi'])){
             
             $run = mysqli_query($db,$query);
             if($run){
-          echo "<script>window.location.href='../admin/index.php?portfoliosetting=true';</script>";                    
+          echo "<script>window.location.href='../admin/account.php?portfoliosetting=true';</script>";                    
         
             }
         
@@ -166,7 +166,7 @@ if(isset($_POST['update-contact'])){
 
     $run = mysqli_query($db,$query);
     if($run){
-  echo "<script>window.location.href='../admin/index.php?contactsetting=true';</script>";                    
+  echo "<script>window.location.href='../admin/account.php?contactsetting=true';</script>";                    
 
     }
 
@@ -196,7 +196,7 @@ if(isset($_POST['update-socialmedia'])){
 
     $run = mysqli_query($db,$query);
     if($run){
-  echo "<script>window.location.href='../admin/index.php?contactsetting=true';</script>";                    
+  echo "<script>window.location.href='../admin/account.php?contactsetting=true';</script>";                    
 
     }
 
@@ -219,7 +219,7 @@ if(isset($_POST['update-background'])){
 
     $run = mysqli_query($db,$query);
     if($run){
-  echo "<script>window.location.href='../admin/index.php?changebackground=true';</script>";                    
+  echo "<script>window.location.href='../admin/account.php?changebackground=true';</script>";                    
 
     }
 
@@ -256,7 +256,7 @@ if(isset($_POST['update-seo'])){
 
     $run = mysqli_query($db,$query);
     if($run){
-  echo "<script>window.location.href='../admin/index.php?seosetting=true';</script>";                    
+  echo "<script>window.location.href='../admin/account.php?seosetting=true';</script>";                    
 
     }
 
@@ -302,7 +302,7 @@ if(isset($_POST['update-account'])){
 
     $run = mysqli_query($db,$query);
     if($run){
-  echo "<script>window.location.href='../admin/index.php?accountsetting=true';</script>";                    
+  echo "<script>window.location.href='../admin/account.php?accountsetting=true';</script>";                    
 
     }
 
