@@ -15,12 +15,12 @@ $user_data = mysqli_fetch_array($run);
   <title>
     <?= $user_data['title'] ?>
   </title>
-  <meta content="<?=$user_data['description']?>" name="description">
-  <meta content="<?=$user_data['keywords']?>" name="keywords">
+  <meta content="<?= $user_data['description'] ?>" name="description">
+  <meta content="<?= $user_data['keywords'] ?>" name="keywords">
 
   <!-- Favicons -->
- <link href="../images/<?=$user_data['siteicon']?>" rel="icon">
-  <link href="../images/<?=$user_data['siteicon']?>" rel="apple-touch-icon">
+  <link href="../images/<?= $user_data['siteicon'] ?>" rel="icon">
+  <link href="../images/<?= $user_data['siteicon'] ?>" rel="apple-touch-icon">
 
   <!-- box icons -->
   <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
@@ -42,34 +42,39 @@ $user_data = mysqli_fetch_array($run);
   <link href="../assets/css/style.css" rel="stylesheet">
 
 </head>
-    <style>
-      body {
-        font-family: "Open Sans", sans-serif;
-        background-color: #040404;
-        color: #fff;
-        overflow-y: scroll; /* Enable vertical scrolling */
-      }
+<style>
+  body {
+    font-family: "Open Sans", sans-serif;
+    background-color: #040404;
+    color: #fff;
+    overflow-y: scroll;
+    /* Enable vertical scrolling */
+  }
 
-      .background-image {
-        position: fixed;
-        top: 0;
-        right: 0;
-        bottom: 0;
-        left: 0;
-        z-index: -1;
-        background: url('../assets/img/<?= $user_data['background_img'] ?>') top right no-repeat;
-        background-size: cover;
-      }
-    </style>
+  .background-image {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: -1;
+    background: url('../assets/img/<?= $user_data['background_img'] ?>') top right no-repeat;
+    background-size: cover;
+  }
+</style>
+
 <body>
-<div class="background-image"></div>
+  <div class="background-image"></div>
   <!-- ======= Header ======= -->
-  <header class="header "id="header">
+  <header class="header " id="header">
 
 
     <div class="container">
-    <img src="../images/logo.png" class="img-fluid" alt="" style="width: 4vw; cursor: pointer; font-style: italic; margin-top: -190px;margin-bottom: 150px; margin-left: -100px; "> 
-      <a href="./home.html" class="logo" style=" display: flex; align-items: center; text-decoration: none; font-size: 1.5rem; color: var(--text-color); margin-top: -200px;margin-bottom: 160px; margin-left: -40px; font-style: italic; font-weight: 600; cursor: pointer;"><b style="color: #1DB954;">rt </b><b style="color: #FFF;">Abode</b></a>
+      <img src="../images/logo.png" class="img-fluid" alt=""
+        style="width: 4vw; cursor: pointer; font-style: italic; margin-top: -190px;margin-bottom: 150px; margin-left: -100px; ">
+      <a href="./home.html" class="logo"
+        style=" display: flex; align-items: center; text-decoration: none; font-size: 1.5rem; color: var(--text-color); margin-top: -200px;margin-bottom: 160px; margin-left: -40px; font-style: italic; font-weight: 600; cursor: pointer;"><b
+          style="color: #1DB954;">rt </b><b style="color: #FFF;">Abode</b></a>
       <h1><a href="portfolio.php">
           <?= $user_data['title'] ?>
         </a></h1>
@@ -102,7 +107,7 @@ $user_data = mysqli_fetch_array($run);
           }
           if ($user_data['portfolio_section']) {
             ?>
-            <li><a class="nav-link" href="#portfolio">Portfolio</a></li>
+            <li><a class="nav-link" href="#portfolio">Artworks</a></li>
             <?php
           }
           if ($user_data['contact_section']) {
@@ -174,7 +179,7 @@ $user_data = mysqli_fetch_array($run);
 
       <div class="row">
         <div class="col-lg-4" data-aos="fade-right">
-           <img src="../images/<?= $user_data['profile_pic'] ?>" class="img-fluid" alt="">
+          <img src="../images/<?= $user_data['profile_pic'] ?>" class="img-fluid" alt="">
         </div>
         <div class="col-lg-8 pt-4 pt-lg-0 content" data-aos="fade-left">
           <h3>
@@ -295,7 +300,8 @@ $user_data = mysqli_fetch_array($run);
                 </i>
               </span>
               <div class="progress-bar-wrap">
-              <div class="progress-bar" role="progressbar" aria-valuenow="<?=$skills['skill_level']?>" aria-valuemin="0" aria-valuemax="100"></div>
+                <div class="progress-bar" role="progressbar" aria-valuenow="<?= $skills['skill_level'] ?>"
+                  aria-valuemin="0" aria-valuemax="100"></div>
               </div>
             </div>
             <?php
@@ -405,8 +411,12 @@ $user_data = mysqli_fetch_array($run);
           <div class="swiper-slide">
             <div class="testimonial-item">
               <p style="text-align: justify;">
-                <i class="bx bxs-quote-alt-left quote-icon-left" ></i>
-                Working with Cedric was an absolute pleasure. Their attention to detail and design skills are exceptional. They took our vision and transformed it into a stunning and user-friendly website. The frontend code they delivered was clean, well-structured, and optimized for performance. Our users love the intuitive interface and seamless navigation. I highly recommend Cedric Vico for any frontend development project.
+                <i class="bx bxs-quote-alt-left quote-icon-left"></i>
+                Working with Cedric was an absolute pleasure. Their attention to detail and design skills are
+                exceptional. They took our vision and transformed it into a stunning and user-friendly website. The
+                frontend code they delivered was clean, well-structured, and optimized for performance. Our users love
+                the intuitive interface and seamless navigation. I highly recommend Cedric Vico for any frontend
+                development project.
                 <i class="bx bxs-quote-alt-right quote-icon-right"></i>
               </p>
               <img src="../assets/img/testimonials/testimonials-1.jpg" class="testimonial-img" alt="">
@@ -419,7 +429,11 @@ $user_data = mysqli_fetch_array($run);
             <div class="testimonial-item">
               <p style="text-align: justify;">
                 <i class="bx bxs-quote-alt-left quote-icon-left"></i>
-                Working with Cedric was an absolute pleasure. Their attention to detail and design skills are exceptional. They took our vision and transformed it into a stunning and user-friendly website. The frontend code they delivered was clean, well-structured, and optimized for performance. Our users love the intuitive interface and seamless navigation. I highly recommend Cedric Vico for any frontend development project.
+                Working with Cedric was an absolute pleasure. Their attention to detail and design skills are
+                exceptional. They took our vision and transformed it into a stunning and user-friendly website. The
+                frontend code they delivered was clean, well-structured, and optimized for performance. Our users love
+                the intuitive interface and seamless navigation. I highly recommend Cedric Vico for any frontend
+                development project.
                 <i class="bx bxs-quote-alt-right quote-icon-right"></i>
               </p>
               <img src="../assets/img/testimonials/testimonials-2.jpg" class="testimonial-img" alt="">
@@ -432,7 +446,11 @@ $user_data = mysqli_fetch_array($run);
             <div class="testimonial-item">
               <p style="text-align: justify;">
                 <i class="bx bxs-quote-alt-left quote-icon-left"></i>
-                Working with Cedric was an absolute pleasure. Their attention to detail and design skills are exceptional. They took our vision and transformed it into a stunning and user-friendly website. The frontend code they delivered was clean, well-structured, and optimized for performance. Our users love the intuitive interface and seamless navigation. I highly recommend Cedric Vico for any frontend development project.
+                Working with Cedric was an absolute pleasure. Their attention to detail and design skills are
+                exceptional. They took our vision and transformed it into a stunning and user-friendly website. The
+                frontend code they delivered was clean, well-structured, and optimized for performance. Our users love
+                the intuitive interface and seamless navigation. I highly recommend Cedric Vico for any frontend
+                development project.
                 <i class="bx bxs-quote-alt-right quote-icon-right"></i>
               </p>
               <img src="../assets/img/testimonials/testimonials-3.jpg" class="testimonial-img" alt="">
@@ -445,7 +463,11 @@ $user_data = mysqli_fetch_array($run);
             <div class="testimonial-item">
               <p style="text-align: justify;">
                 <i class="bx bxs-quote-alt-left quote-icon-left"></i>
-                Working with Cedric was an absolute pleasure. Their attention to detail and design skills are exceptional. They took our vision and transformed it into a stunning and user-friendly website. The frontend code they delivered was clean, well-structured, and optimized for performance. Our users love the intuitive interface and seamless navigation. I highly recommend Cedric Vico for any frontend development project.
+                Working with Cedric was an absolute pleasure. Their attention to detail and design skills are
+                exceptional. They took our vision and transformed it into a stunning and user-friendly website. The
+                frontend code they delivered was clean, well-structured, and optimized for performance. Our users love
+                the intuitive interface and seamless navigation. I highly recommend Cedric Vico for any frontend
+                development project.
                 <i class="bx bxs-quote-alt-right quote-icon-right"></i>
               </p>
               <img src="../assets/img/testimonials/testimonials-4.jpg" class="testimonial-img" alt="">
@@ -458,7 +480,11 @@ $user_data = mysqli_fetch_array($run);
             <div class="testimonial-item">
               <p style="text-align: justify;">
                 <i class="bx bxs-quote-alt-left quote-icon-left"></i>
-                Working with Cedric was an absolute pleasure. Their attention to detail and design skills are exceptional. They took our vision and transformed it into a stunning and user-friendly website. The frontend code they delivered was clean, well-structured, and optimized for performance. Our users love the intuitive interface and seamless navigation. I highly recommend Cedric Vico for any frontend development project.
+                Working with Cedric was an absolute pleasure. Their attention to detail and design skills are
+                exceptional. They took our vision and transformed it into a stunning and user-friendly website. The
+                frontend code they delivered was clean, well-structured, and optimized for performance. Our users love
+                the intuitive interface and seamless navigation. I highly recommend Cedric Vico for any frontend
+                development project.
                 <i class="bx bxs-quote-alt-right quote-icon-right"></i>
               </p>
               <img src="../assets/img/testimonials/testimonials-5.jpg" class="testimonial-img" alt="">
@@ -621,13 +647,13 @@ $user_data = mysqli_fetch_array($run);
     <div class="container">
 
       <div class="section-title">
-        <h2>Portfolio</h2>
+        <h2>Artworks</h2>
         <p>My Works</p>
       </div>
 
       <div class="row">
         <div class="col-lg-12 d-flex justify-content-center">
-        <ul id="portfolio-flters">
+          <ul id="portfolio-flters">
             <li data-filter="*" class="filter-active">All</li>
             <li data-filter=".filter-app">App</li>
             <li data-filter=".filter-card">Card</li>
@@ -654,9 +680,10 @@ $user_data = mysqli_fetch_array($run);
                   <?= $portfolio['project_type'] ?>
                 </p>
                 <div class="portfolio-links">
-                  <a href="../images/<?= $portfolio['project_pic'] ?>" data-gallery="portfolioGallery" class="portfolio-lightbox"
-                    title="<?= $portfolio['project_name'] ?>"><i class="bx bx-plus"></i></a>
-                  <a href="<?= $portfolio['project_link'] ?>" data-gallery="portfolioDetailsGallery" data-glightbox="type: external" class="portfolio-details-lightbox" title="Portfolio Details"><i class="bx bx-link"></i></a>
+                  <a href="../images/<?= $portfolio['project_pic'] ?>" data-gallery="portfolioGallery"
+                    class="portfolio-lightbox" title="<?= $portfolio['project_name'] ?>"><i class="bx bx-plus"></i></a>
+                  <a href="<?= $portfolio['project_link'] ?>" data-gallery="portfolioGallery"
+                    class="portfolio-details-lightbox"><i class="bx bx-link"></i></a>
                 </div>
               </div>
             </div>
@@ -685,7 +712,7 @@ $user_data = mysqli_fetch_array($run);
             <i class="bx bx-map"></i>
             <h3>My Address</h3>
             <p>
-              <?= $user_data['address']?>
+              <?= $user_data['address'] ?>
             </p>
           </div>
         </div>
@@ -695,43 +722,45 @@ $user_data = mysqli_fetch_array($run);
             <i class="bx bx-share-alt"></i>
             <h3>Social Profiles</h3>
             <div class="social-links">
-            <?php if ($user_data['twitter'] != '') { ?>
-              <a href="https://twitter.com/<?= $user_data['twitter'] ?>" class="twitter"><i class="bi bi-twitter"></i></a>
-            <?php
-            }
-            ?>
+              <?php if ($user_data['twitter'] != '') { ?>
+                <a href="https://twitter.com/<?= $user_data['twitter'] ?>" class="twitter"><i
+                    class="bi bi-twitter"></i></a>
+                <?php
+              }
+              ?>
 
-            <?php if ($user_data['facebook'] != '') { ?>
-              <a href="https://facebook.com/<?= $user_data['facebook'] ?>" class="facebook"><i
-                  class="bi bi-facebook"></i></a>
+              <?php if ($user_data['facebook'] != '') { ?>
+                <a href="https://facebook.com/<?= $user_data['facebook'] ?>" class="facebook"><i
+                    class="bi bi-facebook"></i></a>
 
-            <?php
-            }
-            if ($user_data['instagram'] != '') {
+                <?php
+              }
+              if ($user_data['instagram'] != '') {
+                ?>
+                <a href="https://instagram.com/<?= $user_data['instagram'] ?>" class="instagram"><i
+                    class="bi bi-instagram"></i></a>
+                <?php
+              }
+              if ($user_data['skype'] != '') {
+                ?>
+                <a href="https://skype.com/<?= $user_data['skype'] ?>" class="google-plus"><i class="bi bi-skype"></i></a>
+                <?php
+              }
+              if ($user_data['skype'] != '') {
+                ?>
+                <a href="https:/youtube.com/<?= $user_data['youtube'] ?>" class="youtube"><i
+                    class="bi bi-youtube"></i></a>
+                <?php
+              }
+              if ($user_data['linkedin'] != '') {
+                ?>
+                <a href="https://linkedin.com/<?= $user_data['linkedin'] ?>" class="linkedin"><i
+                    class="bi bi-linkedin"></i></a>
+                <?php
+              }
               ?>
-              <a href="https://instagram.com/<?= $user_data['instagram'] ?>" class="instagram"><i
-                  class="bi bi-instagram"></i></a>
-              <?php
-            }
-            if ($user_data['skype'] != '') {
-              ?>
-              <a href="https://skype.com/<?= $user_data['skype'] ?>" class="google-plus"><i class="bi bi-skype"></i></a>
-              <?php
-            }
-            if ($user_data['skype'] != '') {
-              ?>
-              <a href="https:/youtube.com/<?= $user_data['youtube'] ?>" class="youtube"><i class="bi bi-youtube"></i></a>
-              <?php
-            }
-            if ($user_data['linkedin'] != '') {
-              ?>
-              <a href="https://linkedin.com/<?= $user_data['linkedin'] ?>" class="linkedin"><i
-                  class="bi bi-linkedin"></i></a>
-              <?php
-            }
-            ?>
+            </div>
           </div>
-        </div>
         </div>
 
         <div class="col-md-6 mt-4 d-flex align-items-stretch">
@@ -754,12 +783,12 @@ $user_data = mysqli_fetch_array($run);
         </div>
       </div>
 
-      
+
       <form action="forms/contact.php" method="post" role="form" class="php-email-form mt-4">
         <div class="row">
-            <div class="info-boxx">
-              <h2 style=" text-align: center; margin-bottom: 20px; font-weight: bold;">Feedback Form</h2>
-            </div>
+          <div class="info-boxx">
+            <h2 style=" text-align: center; margin-bottom: 20px; font-weight: bold;">Feedback Form</h2>
+          </div>
           <div class="col-md-6 form-group">
             <input type="text" name="name" class="form-control" id="name" placeholder="Your Name" required>
           </div>
@@ -784,9 +813,9 @@ $user_data = mysqli_fetch_array($run);
 
     </div>
   </section><!-- End Contact Section -->
-  
+
   <div class="credits">
-  Copyright &copy; 2023 <a href="#">by Group 4 | All Rights Reserved.</a>
+    Copyright &copy; 2023 <a href="#">by Group 4 | All Rights Reserved.</a>
   </div>
 
   <!-- Vendor JS Files -->
