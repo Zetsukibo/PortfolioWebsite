@@ -119,6 +119,9 @@ $user_data = mysqli_fetch_array($run);
           <?php
 
           ?>
+
+        <li><a class="nav-link" href="../login.php" style="display: inline-block; padding: 0.7rem 1rem; background: #1db954;
+                    border-radius: 2rem; box-shadow: 0 0 .5rem #1db954; font-size: .5rem; margin-left: 10px; color: var(--second-bg-color); letter-spacing: 0.05rem;font-weight: 500; transition: 0.5s ease;">Login</a></li>
         </ul>
         <i class="bi bi-list mobile-nav-toggle"></i>
       </nav><!-- .navbar -->

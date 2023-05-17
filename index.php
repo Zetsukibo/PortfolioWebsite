@@ -120,7 +120,7 @@ $user_data = mysqli_fetch_array($run);
           ?>
           <li><a class="nav-link" href="admin/account.php">Account</a></li>
           <li><a class="nav-link" href="logout.php" style="display: inline-block; padding: 0.7rem 1rem; background: #1db954;
-                    border-radius: 2rem; box-shadow: 0 0 1rem #1db954; font-size: .6rem; color: var(--second-bg-color); letter-spacing: 0.05rem;font-weight: 500; transition: 0.5s ease;">Logout</a></li>
+                    border-radius: 2rem; box-shadow: 0 0 .5rem #1db954; font-size: .6rem; color: var(--second-bg-color); letter-spacing: 0.05rem;font-weight: 500; transition: 0.5s ease;">Logout</a></li>
         </ul>
         <i class="bi bi-list mobile-nav-toggle"></i>
       </nav><!-- .navbar -->
